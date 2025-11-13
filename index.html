@@ -1,12 +1,11 @@
-
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Per Folia</title>
+  <title>Per Folia oficial</title>
   <style>
     body {
       text-align: center;
       font-family: sans-serif;
-      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
     }
@@ -17,7 +16,7 @@
     }
 
     section.active {
-      display: block; 
+      display: block; /
     }
 
     button {
@@ -40,6 +39,8 @@
     }
   </style>
 </head>
+
+
 <body>
     <style> 
 h1, h2, h3, h4, h5, h6 {
@@ -48,10 +49,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #1A4C63;          
   margin-top: 50px;      
   margin-bottom: 20px;     
-  font-family: 'Poppins',  
+  font-family: 'Poppins';
   text-align: center;     
-  letter-spacing: 0.5px;     
-}
+  letter-spacing: 0.5px;
+  display: flex;
+
+  }
+
  p {
       font-size: 16px;
       line-height: 1.6;
@@ -64,19 +68,28 @@ h1, h2, h3, h4, h5, h6 {
 
 
   <!-- *Sección de inicio -->
+
   <section id="inicio" class="active">
     <button>Contacto</button>
     <h1>PER FOLIA</h1>
+<style>
+#inicio{
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #f3e596c6 0%, #FFFFFF 95.67%);
+}
+</style>
+
     <button id="btnCuaderno">Abrir el cuaderno</button>
     <br>
-    <img src="libro.svg" alt="Ícono de libro">
+    <img src=" " alt="Ícono de libro">
   </section>
 
   <!-- *Sección del cuaderno 1 lo que iría con scroll horizontal-->
+
   <section id="cuaderno">
     <style> 
 
 #cuaderno {
+  
   display: flex;
   flex-direction: row;
   overflow-x: auto;
@@ -85,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   scroll-behavior: smooth;
   height: 100vh;
   align-items: center;
-  background-color: #f9f9f9;
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%)
 }
 
 #cuaderno > div {
@@ -105,8 +118,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: justify;
   white-space: normal;           
   font-size: 16px;
+  font-family: 'League Script', cursive;
+  font-style: normal;
   line-height: 1.6;
-  color: #333;
+  color: #5F8292;
 }
 
 
@@ -123,7 +138,11 @@ El papel es grueso y tiene ese olor a “nuevo” que tanto me gusta. Paso un bu
 Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. 
 Me gusta cuando el color hace lo que quiere.  
 </p>
+
+<button id="btnVolver">Volver al inicio</button>
 </div>
+
+
 
 <div> 
 <h2>18 de abril</h2>
@@ -269,7 +288,9 @@ Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña
 </p>
 </div>
   </section>
-  <!-- *Hasta acá va el scroll horizontal-->
+
+
+  <!-- *Hasta acá iría el scroll horizontal-->
 
   <script>
     const inicio = document.getElementById('inicio');
@@ -288,3 +309,5 @@ Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña
   </script>
 </body>
 </html>
+
+
