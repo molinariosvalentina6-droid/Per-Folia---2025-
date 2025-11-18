@@ -1,0 +1,290 @@
+
+<html lang="es">
+<head>
+  <title>Per Folia</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      display: none; 
+      padding: 50px 20px;
+    }
+
+    section.active {
+      display: block; /* para que solo se muestra la activa */
+    }
+
+    button {
+      background-color: #FCFACF;
+      color: #1A4C63;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ECD0DE;
+    }
+    
+    img {
+      margin-top: 40px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+    <style> 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 26px;           
+  font-weight: 500;          
+  color: #1A4C63;          
+  margin-top: 50px;      
+  margin-bottom: 20px;     
+  font-family: 'Poppins',  
+  text-align: center;     
+  letter-spacing: 0.5px;     
+}
+ p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #5F8292;
+    }
+
+    </style>
+
+
+  <!-- *Sección de inicio -->
+  <section id="inicio" class="active">
+    <button>Contacto</button>
+    <h1>PER FOLIA</h1>
+    <button id="btnCuaderno">Abrir el cuaderno</button>
+    <br>
+    <img src="libro.svg" alt="Ícono de libro">
+  </section>
+
+  <!-- *Sección del cuaderno 1 lo que iría con scroll horizontal-->
+  <section id="cuaderno">
+    <style> 
+
+#cuaderno {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+#cuaderno > div {
+  flex: 0 0 100vw;             
+  scroll-snap-align: center;    
+  box-sizing: border-box;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;       
+  align-items: center;          
+}
+
+
+#cuaderno p {
+  max-width: 600px;          
+  text-align: justify;
+  white-space: normal;           
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+#cuaderno button {
+  margin-top: 20px;
+}
+    </style>
+
+<div> 
+<h1>17 de abril </h1>
+<p>
+Hoy empiezo un cuaderno nuevo.  
+El papel es grueso y tiene ese olor a “nuevo” que tanto me gusta. Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante. 
+Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. 
+Me gusta cuando el color hace lo que quiere.  
+</p>
+</div>
+
+<div> 
+<h2>18 de abril</h2>
+<p>
+Dibujo la taza del desayuno. El vapor se confunde con la sombra y termino usando tonos grises con un poco de violeta. Me gusta cómo queda. El gato se sube a la mesa y deja una huella pequeña sobre el borde de la hoja. Por un momento pienso en borrarla, pero no lo hago. 
+Veo que el cuaderno empieza a llenarse de vida sin planearlo. Cada trazo tiene algo mío y algo de las cosas que me rodean. Me gusta la idea de que al dibujar guardo pedazos del día.
+</p>
+</div>
+
+<div> 
+  <h3>22 de abril</h3>
+<p>
+Estoy en el parque con mi libreta. Hace sol, pero el viento no me deja pintar tranquila. Cada vez que intento trazar una línea, el papel se mueve. Termino persiguiendo mis propias hojas por el pasto. 
+Aún así, luego logro dibujar unas ramas y la sombra de una fuente. No se parecen mucho a lo real, pero eso no me molesta. Al revisar los dibujos, siento que son más recuerdos que paisajes. Supongo que mi mano dibuja lo que mi mente retiene, no lo que mis ojos ven.
+</p>
+<button>Ver recuerdo</button>
+</div>
+
+<div> 
+<h4>25 de abril</h4>
+<p>
+Hoy quiero usar amarillo. Lo pongo en todos lados: en las flores, en el borde de la ventana, en el cielo, aunque no estaba soleado. El amarillo me da calma. 
+Pintar me relaja. Siento que los colores dicen lo que no me animo a escribir.  
+Me quedo hasta tarde, con la lámpara encendida, mirando cómo se secan las acuarelas. El silencio de la noche y el olor a pintura se mezclan. Es un buen día.
+</p>
+</div>
+
+<div> 
+<h5>30 de abril</h5>
+<p>
+Me siento junto a la ventana con el cuaderno. Pinto la lluvia cayendo y dejando rastros sobre el vidrio. Dejo que el agua corra sobre la hoja y forme caminos propios. 
+Al terminar, la página tiene ese brillo húmedo que me gusta. A veces creo que mis dibujos se parecen a mí: un poco desordenados, con manchas, pero honestos.
+</p>
+</div>
+
+<div> 
+<h6>7 de mayo</h6>
+<p>
+No duermo bien. Esta mañana todo me cuesta. El agua del pincel está sucia y ni siquiera tengo ganas de cambiarla. Intento dibujar algo, cualquier cosa, pero los colores se ven apagados. 
+El azul, mi color favorito, se vuelve gris. No sé si es por el agua o por mí. Cierro el cuaderno antes de terminar la hoja. No quiero seguir. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel7">11 de mayo</h6>
+<p>
+Hoy vuelvo a intentarlo, pero termino borrando todo lo que hago. El papel se arruga, lleno de marcas. Me duele ver cómo se rompe un poco con cada trazo que borro. 
+No sé por qué nada me gusta últimamente. Me siento torpe, como si hubiera olvidado cómo dibujar. Ni siquiera sé qué quiero pintar. 
+</p>
+<button>Ver recuerdo</button>
+</div>
+
+<div> 
+<h6 class="nivel8">17 de mayo</h6>
+<p>
+Hoy decido no usar color. Solo tomo un lápiz y empiezo a hacer líneas, una encima de otra, sin pensar. 
+Me quedo mirando el resultado y no siento nada. Solo cansancio. 
+A veces me pregunto si el dibujo también se cansa de mí, si el papel siente mi desánimo.  
+</p>
+</div>
+
+<div> 
+<h6 class="nivel9">20 de mayo</h6>
+<p>
+Noto una mancha en la esquina inferior de una página. No recuerdo haberla hecho. Es pequeña, pero no puedo dejar de mirarla. 
+No sé si me gusta o me molesta, pero no tengo ganas de taparla. La dejo ahí, quieta, como un recuerdo que no sé si quiero o no. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel10">26 de mayo</h6>
+<p>
+Hoy no dibujo. Abro el cuaderno, lo miro, y lo cierro sin tocar nada. 
+No tengo fuerzas. Todo se siente igual, como si los días pasaran sin dejar rastro. 
+El papel sigue en blanco, esperándome. Pero yo no tengo nada para contarle. 
+</p>
+</div>
+
+<div>
+<h6 class="nivel11">30 de mayo</h6>
+<p>
+Reviso mis dibujos antiguos. Intento pintar otra vez la playa que hice en febrero. Antes era luminosa, pero ahora no puedo. El mar se borra solo, como si no quisiera estar ahí. 
+Me quedo mirando la hoja en silencio. Siento una especie de vacío, pero no tristeza. Solo cansancio. 
+Tal vez el cuaderno y yo necesitamos un descanso. 
+</p>
+<button>Ver recuerdo</button>
+</div>
+
+<div> 
+<h6 class="nivel12">6 de junio</h6>
+<p>
+Abro el cuaderno después de varios días. No sé si voy a poder dibujar algo, pero lo hago. 
+Paso los dedos por las manchas viejas y me sorprende que ya no me duelan. Son solo colores, rastros de algo que fui. 
+Hago un trazo torcido, sin pensar demasiado. Antes lo habría borrado, pero hoy lo dejo. Me parece bien así. Me doy cuenta de que puedo empezar otra vez, aunque no sepa cómo. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel13">9 de junio</h6>
+<p>
+Hoy quiero cambiar, así que uso verde pálido, un tono suave que casi se pierde en el papel. No quiero llenar la hoja. Solo hago una curva y un punto. Me gusta ver el espacio vacío. 
+Antes me daba miedo dejar las cosas incompletas. Ahora me parece que el blanco también forma parte del dibujo. Tal vez no se trata de llenar todo, sino de aprender a dejar espacio. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel14">12 de junio</h6>
+<p>
+Me doy cuenta de que ya no dibujo igual. Antes buscaba que las cosas se parecieran a lo que veía. Ahora solo dejo que el color se mueva. 
+Hoy hago una mancha que parece una nube y otra que se vuelve árbol. No las planeo. 
+Mientras pinto, siento algo parecido a tranquilidad. No felicidad, pero sí descanso. Creo que eso ya es bastante. 
+</p>
+<button>Ver recuerdo</button>
+</div>
+
+<div> 
+  <h6 class="nivel15">15 de junio</h6>
+<p>
+Salgo a caminar sin el cuaderno. No siento culpa por hacerlo. El aire está fresco y el cielo limpio. 
+Cuando regreso, dibujo una línea larga que cruza la página y se pierde al final. No sé si es el mar o un camino, pero me gusta verla así, simple. 
+Por primera vez en mucho tiempo, no quiero corregir nada. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel16">20 de junio</h6>
+<p>
+Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo. 
+Mientras se seca, noto que ya no me duele mirar mis dibujos. 
+No siento la necesidad de entenderlos. Solo de seguir haciendo más. 
+</p>
+</div>
+
+<div> 
+<h6 class="nivel17">23 de junio</h6>
+<p>
+Cierro el cuaderno. Escucho el ruido de las hojas al juntarse y me da una sensación de paz. 
+No creo haber terminado, pero no tengo prisa. 
+
+El cuaderno está lleno de cosas que no sé explicar, pero me gusta. 
+Lo dejo sobre la mesa, al lado del vaso de agua y los pinceles. 
+Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña. 
+</p>
+</div>
+  </section>
+  <!-- *Hasta acá va el scroll horizontal-->
+
+  <script>
+    const inicio = document.getElementById('inicio');
+    const cuaderno = document.getElementById('cuaderno');
+    const btnCuaderno = document.getElementById('btnCuaderno');
+    
+    btnCuaderno.addEventListener('click', () => {
+      inicio.classList.remove('active');
+      cuaderno.classList.add('active');
+    });
+
+    btnVolver.addEventListener('click', () => {
+      cuaderno.classList.remove('active');
+      inicio.classList.add('active');
+    });
+  </script>
+</body>
+</html>
