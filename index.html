@@ -154,13 +154,62 @@ font-style: normal;
     </style>
 
 <div> 
-  <h1>17 de abril </h1> 
-  <p> Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a “nuevo” que tanto me gusta. 
-  Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante.
-  Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel.
-  Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere. </p> 
+  <h1>17 de abril</h1> 
+  <p class="texto-animado">
+    Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a "nuevo" que tanto me gusta. Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante. Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere.
+  </p>
 </div>
 
+<style>
+.texto-animado {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.texto-animado span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Selecciona TODOS los párrafos
+  const textos = document.querySelectorAll('p');
+  
+  textos.forEach(texto => {
+    const palabras = texto.textContent.trim().split(' ');
+    texto.innerHTML = '';
+    texto.classList.add('texto-animado');
+    
+    palabras.forEach((palabra, index) => {
+      const span = document.createElement('span');
+      span.textContent = palabra;
+      span.style.animationDelay = `${index * 0.05}s`;
+      texto.appendChild(span);
+      
+      if (index < palabras.length - 1) {
+        texto.appendChild(document.createTextNode(' '));
+      }
+    });
+  });
+});
+</script>
 
 
 <div> 
