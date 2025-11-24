@@ -2,17 +2,21 @@
 <html>
 <head>
   <title>Per Folia oficial</title>
+  <link rel="stylesheet" href="https://use.typekit.net/erq8iyr.css">
   <style>
     body {
       text-align: center;
       font-family: sans-serif;
-      margin: center;
-      padding: 160px;
+      margin: 0;             
+      padding: 0;             
+      overflow-x: hidden;
     }
 
     section {
       display: none; 
       padding: 50px 20px;
+      min-height: 100vh;     
+      box-sizing: border-box;
     }
 
     section.active {
@@ -44,9 +48,10 @@
 <body>
     <style> 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 26px;           
-  font-weight: 500;          
-  color: #1A4C63;          
+font-family: "boucherie-cursive", sans-serif;
+font-size:40%;
+  font-weight: 400;
+color: #1A4C63;          
   margin-top: 50px;      
   margin-bottom: 20px;     
   font-family: 'Poppins';
@@ -86,7 +91,9 @@ h1, h2, h3, h4, h5, h6 {
 <style>
 #inicio{
   background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #f3e596c6 0%, #FFFFFF 95.67%);
-}
+  min-height: 100vh;
+  overflow: hidden;
+  }
 </style>
 
     <button id="btnCuaderno">Abrir el cuaderno</button>
@@ -107,21 +114,23 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
-  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) 
+   background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) 
 }
 
 #cuaderno > div {
   flex: 0 0 100vw;             
   scroll-snap-align: center;    
   box-sizing: border-box;
-  padding: 40px;
   display: flex;
+  min-height: 100vh;
   flex-direction: column;     
   justify-content: center;       
   align-items: center;          
-  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) 
+  background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%);
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -130,10 +139,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: justify;
   white-space: normal;           
   font-size: 16px;
-  font-family: 'League Script', cursive;
-  font-style: normal;
+    font-style: normal;
   line-height: 1.6;
   color: #5F8292;
+  font-family: "boucherie-cursive", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 
@@ -143,13 +154,62 @@ h1, h2, h3, h4, h5, h6 {
     </style>
 
 <div> 
-  <h1>17 de abril </h1> 
-  <p> Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a “nuevo” que tanto me gusta. 
-  Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante.
-  Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel.
-  Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere. </p> 
+  <h1>17 de abril</h1> 
+  <p class="texto-animado">
+    Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a "nuevo" que tanto me gusta. Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante. Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere.
+  </p>
 </div>
 
+<style>
+.texto-animado {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.texto-animado span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Selecciona TODOS los párrafos
+  const textos = document.querySelectorAll('p');
+  
+  textos.forEach(texto => {
+    const palabras = texto.textContent.trim().split(' ');
+    texto.innerHTML = '';
+    texto.classList.add('texto-animado');
+    
+    palabras.forEach((palabra, index) => {
+      const span = document.createElement('span');
+      span.textContent = palabra;
+      span.style.animationDelay = `${index * 0.05}s`;
+      texto.appendChild(span);
+      
+      if (index < palabras.length - 1) {
+        texto.appendChild(document.createTextNode(' '));
+      }
+    });
+  });
+});
+</script>
 
 
 <div> 
@@ -279,12 +339,46 @@ El azul, mi color favorito, se vuelve gris. No sé si es por el agua o por mí. 
 </p>
 </div>
 
-<div> 
+
+<div>
 <h6 class="nivel7">11 de mayo</h6>
-<p>
+  <p>
 Hoy vuelvo a intentarlo, pero termino borrando todo lo que hago. El papel se arruga, lleno de marcas. Me duele ver cómo se rompe un poco con cada trazo que borro. 
 No sé por qué nada me gusta últimamente. Me siento torpe, como si hubiera olvidado cómo dibujar. Ni siquiera sé qué quiero pintar. 
-</p>
+  </p>
+  <button id="abrirVentana1" class="boton-ver">Ver recuerdo</button>
+</div>
+
+<div id="ventanaEmergente1" class="ventana-emergente">
+  <div class="contenido-ventana">
+    <p>
+     Hubo un día, hace meses, en que intenté aprender a tocar guitarra. 
+     Practiqué un acorde hasta que me dolieron los dedos. Cada vez sonaba más 
+     sucio, más lejos de lo que quería. Al final dejé el instrumento apoyado 
+     en la pared, derrotado. A veces, cuando la frustración vuelve, me acuerdo 
+     de ese acorde torcido: no era bonito, pero fue lo más sincero que hice en 
+     ese momento.  
+    </p>
+    <button id="cerrarVentana1" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir1 = document.getElementById("abrirVentana1");
+  const cerrar1 = document.getElementById("cerrarVentana1");
+  const ventana1 = document.getElementById("ventanaEmergente1");
+
+  abrir1.addEventListener("click", () => {
+    ventana1.style.display = "flex";
+  });
+
+  cerrar1.addEventListener("click", () => {
+    ventana1.style.display = "none";
+  });
+</script>
+
+
+
 </div>
 
 <div> 
@@ -320,7 +414,31 @@ Reviso mis dibujos antiguos. Intento pintar otra vez la playa que hice en febrer
 Me quedo mirando la hoja en silencio. Siento una especie de vacío, pero no tristeza. Solo cansancio. 
 Tal vez el cuaderno y yo necesitamos un descanso. 
 </p>
+ <button id="abrirVentana2" class="boton-ver">Ver recuerdo</button>
 </div>
+
+<div id="ventanaEmergente2" class="ventana-emergente">
+  <div class="contenido-ventana">
+    <p>
+      Hace un año viajé a una laguna. Era un lugar hermoso, pero cuando llegué no sentí nada. Todos hablaban de lo impresionante que era el paisaje, del color del agua, del silencio perfecto. Yo solo miraba sin poder conectar. Pensé que algo estaba mal conmigo. Ese día entendí que hay momentos en los que uno solo puede estar, sin sentir. Y eso también es una forma de mirar.
+    </p>
+    <button id="cerrarVentana2" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir2 = document.getElementById("abrirVentana2");
+  const cerrar2 = document.getElementById("cerrarVentana2");
+  const ventana2 = document.getElementById("ventanaEmergente2");
+
+  abrir2.addEventListener("click", () => {
+    ventana2.style.display = "flex";
+  });
+
+  cerrar2.addEventListener("click", () => {
+    ventana2.style.display = "none";
+  });
+</script>
 
 <div> 
 <h6 class="nivel12">6 de junio</h6>
@@ -346,9 +464,32 @@ Me doy cuenta de que ya no dibujo igual. Antes buscaba que las cosas se parecier
 Hoy hago una mancha que parece una nube y otra que se vuelve árbol. No las planeo. 
 Mientras pinto, siento algo parecido a tranquilidad. No felicidad, pero sí descanso. Creo que eso ya es bastante. 
 </p>
-<button>Ver recuerdo</button>
+<button id="abrirVentana3" class="boton-ver">Ver recuerdo</button>
    
 </div>
+
+<div id="ventanaEmergente3" class="ventana-emergente">
+  <div class="contenido-ventana">
+    <p>
+      Cuando tenía quince años intenté restaurar un cuaderno muy viejo de mi abuelo. Sus páginas estaban amarillas y llenas de manchas de tinta. Yo quería dejarlo perfecto, como nuevo. Pero mientras lo limpiaba me di cuenta de que, si borraba demasiado, también borraría sus rastros. Me detuve. Ese día entendí que hay cosas que se guardan mejor si se aceptan tal como son.
+    </p>
+    <button id="cerrarVentana3" class="boton-cerrar">Volver al cuaderno</button>
+  </div>
+</div>
+
+<script>
+  const abrir3 = document.getElementById("abrirVentana3");
+  const cerrar3 = document.getElementById("cerrarVentana3");
+  const ventana3 = document.getElementById("ventanaEmergente3");
+
+  abrir3.addEventListener("click", () => {
+    ventana3.style.display = "flex";
+  });
+
+  cerrar3.addEventListener("click", () => {
+    ventana3.style.display = "none";
+  });
+</script>
 
 <div> 
   <h6 class="nivel15">15 de junio</h6>
