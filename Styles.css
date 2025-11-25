@@ -1,0 +1,759 @@
+/* Per Folia - Home */
+
+position: relative;,
+width: 1435px;
+height: 870px;
+
+background: url(.png), #FFFFFF;
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap'); 
+
+/* Contacto */
+
+position: relative;
+width: 1280px;
+height: 1840px;
+
+background: #FFFFFF;
+
+
+/* Carril 1a */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1b */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1c */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1d */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1e */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1 f */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* *Usaremos el scroll horizontal como forma de navegación */
+
+position: absolute;
+width: 581px;
+height: 103px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #FFFFFF;
+
+
+
+/* Dibujo la taza del desayuno. */
+
+position: absolute;
+width: 310px;
+height: 28px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+/* idéntica a la altura del cuadro */
+text-align: right;
+
+/* Secundario 1 */
+color: #1A4C63;
+
+
+
+/* El gato se sube a la mesa y deja una huella pequeña sobre el borde de la hoja. Por un momento pienso en borrarla, pero no lo hago.   */
+
+position: absolute;
+width: 458px;
+height: 123px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+/* Secundario 1 */
+color: #1A4C63;
+
+
+
+/* Cada vez que intento trazar una línea, el papel se mueve. Termino persiguiendo mis propias hojas por el pasto.   */
+
+position: absolute;
+width: 453px;
+height: 126px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Estoy en el parque con mi libreta. Hace sol, pero el viento no me deja pintar tranquila. */
+
+position: absolute;
+width: 668px;
+height: 83px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Aún así, luego logro dibujar unas ramas y la sombra de una fuente. No se parecen mucho a lo real, pero eso no me molesta. */
+
+position: absolute;
+width: 437px;
+height: 112px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Al revisar los dibujos, siento que son más recuerdos que paisajes. Supongo que mi mano dibuja lo que mi mente retiene, no lo que mis ojos ven.  */
+
+position: absolute;
+width: 561px;
+height: 153px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* 25 de abril */
+
+position: absolute;
+width: 304px;
+height: 71px;
+
+/* Fechas A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 71px;
+/* idéntica a la altura del cuadro */
+text-align: right;
+
+color: #000000;
+
+
+
+/* Hoy quiero usar amarillo. Lo pongo en todos lados: en las flores, en el borde de la ventana, en el cielo, aunque no estaba soleado. El amarillo me da calma.   */
+
+position: absolute;
+width: 420px;
+height: 196px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Pintar me relaja. Siento que los colores dicen lo que no me animo a escribir. */
+
+position: absolute;
+width: 409px;
+height: 84px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Noche profunda, me quedo hasta tarde, con la lámpara encendida, mirando cómo se secan las acuarela. El silencio de la noche y el olor a pintura se mezclan. Es un buen día. */
+
+position: absolute;
+width: 421px;
+height: 272px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: right;
+
+color: #000000;
+
+
+
+/* 30 de abril  */
+
+position: absolute;
+width: 321px;
+height: 71px;
+
+/* Fechas A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 71px;
+/* idéntica a la altura del cuadro */
+text-align: right;
+
+color: #000000;
+
+
+
+/* Me siento junto a la ventana con el cuaderno. Pinto la lluvia cayendo y dejando rastros sobre el vidrio. */
+
+position: absolute;
+width: 633px;
+height: 56px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Dejo que el agua corra sobre la hoja y forme caminos propios.   */
+
+position: absolute;
+width: 290px;
+height: 112px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Al terminar, la página tiene ese brillo húmedo que me gusta. A veces creo que mis dibujos se parecen a mí: un poco desordenados, con manchas, pero honestos. */
+
+position: absolute;
+width: 521px;
+height: 112px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* 7 de mayo */
+
+position: absolute;
+width: 278px;
+height: 71px;
+
+/* Fechas A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 71px;
+/* idéntica a la altura del cuadro */
+
+color: #000000;
+
+
+
+/* No duermo bien. */
+
+position: absolute;
+width: 175px;
+height: 28px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+/* idéntica a la altura del cuadro */
+
+color: #000000;
+
+
+
+/* Esta mañana todo me cuesta. El agua del pincel está sucia y ni siquiera tengo ganas de cambiarla. Intento dibujar algo, cualquier cosa, pero los colores se ven apagados.   El azul, mi color favorito, se vuelve gris. No sé si es por el agua o por mí. Cierro el cuaderno antes de terminar la hoja. No quiero seguir */
+
+position: absolute;
+width: 498px;
+height: 420px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Frame */
+
+/* Disposición automática */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 64px;
+gap: 48px;
+
+position: relative;
+width: 570px;
+height: 883px;
+
+background: #FFFFFF;
+
+
+/* Paleta de colores */
+
+box-sizing: border-box;
+
+position: relative;
+width: 570px;
+height: 327px;
+
+background: #FFFFFF;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 2px;
+
+
+/* Botones */
+
+box-sizing: border-box;
+
+position: relative;
+width: 570px;
+height: 432px;
+
+background: #FFFFFF;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 2px;
+
+
+/* Iconos */
+
+box-sizing: border-box;
+
+position: relative;
+width: 570px;
+height: 531px;
+
+background: #FFFFFF;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 2px;
+
+
+/* Hoy decido no usar color. Solo tomo un lápiz y empiezo a hacer líneas, una encima de otra, sin pensar.   Me quedo mirando el resultado y no siento nada. Solo cansancio.  A veces me pregunto si el dibujo también se cansa de mí, si el papel siente mi desánimo.   */
+
+position: absolute;
+width: 462px;
+height: 366px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Hoy no dibujo. Abro el cuaderno, lo miro, y lo cierro sin tocar nada.   No tengo fuerzas. Todo se siente igual, como si los días pasaran sin dejar rastro.   El papel sigue en blanco, esperándome. Pero yo no tengo nada para contarle. */
+
+position: absolute;
+width: 289px;
+height: 272px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Carril 1 g */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1 h */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Carril 1 i */
+
+position: relative;
+width: 2813px;
+height: 1024px;
+
+/* Fondo página cuaderno */
+background: radial-gradient(49.17% 371.08% at 50.13% 50.95%, #DFD8E8 0%, #FFFFFF 95.67%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+
+
+/* Por primera vez en mucho tiempo, no quiero corregir nada. */
+
+position: absolute;
+width: 236px;
+height: 99px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Cuando regreso, dibujo una línea larga que cruza la página y se pierde al final. No sé si es el mar o un camino, pero me gusta verla así, simple.   */
+
+position: absolute;
+width: 651px;
+height: 209px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* No siento culpa por hacerlo. El aire está fresco y el cielo limpio.   */
+
+position: absolute;
+width: 278px;
+height: 105px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Salgo a caminar sin el cuaderno. */
+
+position: absolute;
+width: 651px;
+height: 209px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+
+color: #000000;
+
+
+
+/* Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo.   Mientras se seca, noto que ya no me duele mirar mis dibujos.  No siento la necesidad de entenderlos. Solo de seguir haciendo más.  */
+
+position: absolute;
+width: 466px;
+height: 305px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo.   Mientras se seca, noto que ya no me duele mirar mis dibujos.  No siento la necesidad de entenderlos. Solo de seguir haciendo más.  */
+
+position: absolute;
+width: 466px;
+height: 305px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo.   Mientras se seca, noto que ya no me duele mirar mis dibujos.  No siento la necesidad de entenderlos. Solo de seguir haciendo más.  */
+
+position: absolute;
+width: 466px;
+height: 305px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Hoy vuelvo al azul, pero no al de antes. Este es más claro, más suave. Lo dejo correr sobre el papel sin pensarlo.   Mientras se seca, noto que ya no me duele mirar mis dibujos.  No siento la necesidad de entenderlos. Solo de seguir haciendo más.  */
+
+position: absolute;
+width: 466px;
+height: 305px;
+
+/* A mano */
+font-family: 'League Script';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 28px;
+text-align: center;
+
+color: #000000;
+
+
+
+/* Recuerdo 25 abril */
+
+position: relative;
+width: 1155px;
+height: 895px;
+
+background: #FFFFFF;
+
+
+/* Recuerdo 11 de mayo */
+
+position: relative;
+width: 1180px;
+height: 942px;
+
+background: #FFFFFF;
+
+
+/* Recuerdo 30 de mayo */
+
+position: relative;
+width: 1222px;
+height: 979px;
+
+background: #FFFFFF;
+
+
+/* Recuerdo 12 de junio  */
+
+position: relative;
+width: 1284px;
+height: 952px;
+
+background: #FFFFFF;
+
+
+/* Recuerdo 23 de junio  */
+
+position: relative;
+width: 1319px;
+height: 823px;
+
+background: #FFFFFF;
+
+
+/* Final bueno 1 */
+
+position: relative;
+width: 2035px;
+height: 1092px;
+
+background: #FFFFFF;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Frame 11 */
+
+position: relative;
+width: 795px;
+height: 436px;
+
+background: #FFFFFF;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Frame 12 */
+
+position: relative;
+width: 795px;
+height: 436px;
+
+background: #FFFFFF;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Final bueno 2 */
+
+position: relative;
+width: 2073px;
+height: 1304px;
+
+background: #FFFFFF;
+
+
+/* Recuerdo 22 de abril */
+
+position: relative;
+width: 710px;
+height: 321px;
+
+background: #FFFFFF;
+
+
+/* Component 1 */
+
+box-sizing: border-box;
+
+position: relative;
+width: 186px;
+height: 158px;
+
+border: 1px dashed #9747FF;
+border-radius: 5px;
