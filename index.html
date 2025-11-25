@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Per Folia oficial</title>
+  <title>Per Folia </title>
   <link rel="stylesheet" href="https://use.typekit.net/erq8iyr.css">
   <style>
     body {
@@ -49,7 +49,7 @@
     <style> 
 h1, h2, h3, h4, h5, h6 {
 font-family: "boucherie-cursive", sans-serif;
-font-size:40%;
+font-size:200%;
   font-weight: 400;
 color: #1A4C63;          
   margin-top: 50px;      
@@ -155,7 +155,7 @@ font-style: normal;
 
 <div> 
   <h1>17 de abril</h1> 
-  <p class="texto-animado">
+  <p>
     Hoy empiezo un cuaderno nuevo. El papel es grueso y tiene ese olor a "nuevo" que tanto me gusta. Paso un buen rato solo mirando la hoja en blanco. Siempre me cuesta empezar, como si poner el primer trazo fuera una decisión demasiado importante. Finalmente, mojo el pincel y veo caer una mancha azul. No la controlo. Solo la dejo moverse sola por el papel. Me quedo viéndola extenderse, formando una especie de nube. Me gusta cuando el color hace lo que quiere.
   </p>
 </div>
@@ -176,7 +176,6 @@ font-style: normal;
   display: inline-block;
   opacity: 0;
   filter: blur(4px);
-  animation: fade-in 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 @keyframes fade-in {
@@ -189,18 +188,25 @@ font-style: normal;
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Selecciona TODOS los párrafos
-  const textos = document.querySelectorAll('p');
+  const cuaderno = document.getElementById('cuaderno');
+  const secciones = document.querySelectorAll('#cuaderno > div');
   
-  textos.forEach(texto => {
+  // Preparar todos los textos
+  secciones.forEach((seccion, seccionIndex) => {
+    const texto = seccion.querySelector('p');
+    if (!texto) return;
+    
     const palabras = texto.textContent.trim().split(' ');
     texto.innerHTML = '';
     texto.classList.add('texto-animado');
+    texto.dataset.animado = 'false';
     
     palabras.forEach((palabra, index) => {
       const span = document.createElement('span');
       span.textContent = palabra;
-      span.style.animationDelay = `${index * 0.05}s`;
+      span.style.display = 'inline-block';
+      span.style.opacity = '0';
+      span.style.filter = 'blur(4px)';
       texto.appendChild(span);
       
       if (index < palabras.length - 1) {
@@ -208,9 +214,38 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  // Animar el primer texto inmediatamente
+  const primerTexto = secciones[0].querySelector('p');
+  if (primerTexto) {
+    primerTexto.dataset.animado = 'true';
+    const spans = primerTexto.querySelectorAll('span');
+    spans.forEach((span, i) => {
+      span.style.animation = `fade-in 0.8s ${i * 0.05}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+    });
+  }
+  
+  // Detectar scroll horizontal
+  cuaderno.addEventListener('scroll', () => {
+    secciones.forEach(seccion => {
+      const rect = seccion.getBoundingClientRect();
+      const texto = seccion.querySelector('p');
+      
+      if (texto && rect.left < window.innerWidth && rect.right > 0) {
+        if (texto.dataset.animado === 'false') {
+          texto.dataset.animado = 'true';
+          
+          // Iniciar animación
+          const spans = texto.querySelectorAll('span');
+          spans.forEach((span, i) => {
+            span.style.animation = `fade-in 0.8s ${i * 0.05}s forwards cubic-bezier(0.11, 0, 0.5, 0)`;
+          });
+        }
+      }
+    });
+  });
 });
 </script>
-
 
 <div> 
 <h2>18 de abril</h2>
