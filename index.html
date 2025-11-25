@@ -46,6 +46,16 @@
 
 
 <body>
+
+<div id="musica">
+<audio id="musicaFondo" src="https://github.com/molinariosvalentina6-droid/Per-Folia---2025-/blob/main/Assets/Kina.mp3?raw=true"> </audio>
+
+  <button id="musicaBtn" onclick="playSound()">Reproducir música de fondo</button>
+
+
+</div>
+
+
     <style> 
 h1, h2, h3, h4, h5, h6 {
 font-family: "boucherie-cursive", sans-serif;
@@ -104,6 +114,8 @@ color: #1A4C63;
   <!-- *Sección del cuaderno 1 lo que iría con scroll horizontal-->
 
   <section id="cuaderno">
+
+
     <style> 
 
 #cuaderno {
@@ -268,6 +280,7 @@ Veo que el cuaderno empieza a llenarse de vida sin planearlo. Cada trazo tiene a
   <button id="abrirVentana" class="boton-ver">Ver recuerdo</button>
 </div>
 <div id="ventanaEmergente" class="ventana-emergente">
+      <button id="musicaBtn" onclick="playSound()">Reproducir música de fondo</button>
   <div class="contenido-ventana">
         <p> Una vez, cuando era niña, intenté dibujar la cara de mi mamá mientras ella dormía.
         Tenía miedo de que se despertara y se diera cuenta de que no sabía captar su expresión. 
@@ -385,6 +398,7 @@ No sé por qué nada me gusta últimamente. Me siento torpe, como si hubiera olv
 </div>
 
 <div id="ventanaEmergente1" class="ventana-emergente">
+      <button id="musicaBtn" onclick="playSound()">Reproducir música de fondo</button>
   <div class="contenido-ventana">
     <p>
      Hubo un día, hace meses, en que intenté aprender a tocar guitarra. 
@@ -453,6 +467,7 @@ Tal vez el cuaderno y yo necesitamos un descanso.
 </div>
 
 <div id="ventanaEmergente2" class="ventana-emergente">
+      <button id="musicaBtn" onclick="playSound()">Reproducir música de fondo</button>
   <div class="contenido-ventana">
     <p>
       Hace un año viajé a una laguna. Era un lugar hermoso, pero cuando llegué no sentí nada. Todos hablaban de lo impresionante que era el paisaje, del color del agua, del silencio perfecto. Yo solo miraba sin poder conectar. Pensé que algo estaba mal conmigo. Ese día entendí que hay momentos en los que uno solo puede estar, sin sentir. Y eso también es una forma de mirar.
@@ -504,6 +519,7 @@ Mientras pinto, siento algo parecido a tranquilidad. No felicidad, pero sí desc
 </div>
 
 <div id="ventanaEmergente3" class="ventana-emergente">
+    <button id="musicaBtn" onclick="playSound()">Reproducir música de fondo</button>
   <div class="contenido-ventana">
     <p>
       Cuando tenía quince años intenté restaurar un cuaderno muy viejo de mi abuelo. Sus páginas estaban amarillas y llenas de manchas de tinta. Yo quería dejarlo perfecto, como nuevo. Pero mientras lo limpiaba me di cuenta de que, si borraba demasiado, también borraría sus rastros. Me detuve. Ese día entendí que hay cosas que se guardan mejor si se aceptan tal como son.
@@ -555,9 +571,14 @@ Lo dejo sobre la mesa, al lado del vaso de agua y los pinceles.
 Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña. 
 </p>
 </div>
+
   </section>
 
 <style>
+  #musica {
+  position: sticky ;
+top: 0;
+}
   .pantalla {
   display: none;           /* Oculta todas las pantallas por defecto */
   height: 100vh;           /* Ocupa toda la pantalla */
@@ -600,6 +621,64 @@ Por primera vez en mucho tiempo, siento que el silencio no duele. Solo acompaña
     cuaderno.classList.remove("active");
     inicio.classList.add("active");
   });
+</script>
+
+<script>
+// Para forzar el autoplay, apenas se cargue la página. Con onload en el <body> del HTML
+// Para controlar reproducción de audio a través de un botón. Otra forma de escuchar eventos.
+// function playSound() {
+//   let audio = document.getElementById("audio");
+//   audio.play(); // pause()
+// }
+// lo anterior es lo mismo que
+// function playSound() {
+//  document.getElementById("audio").play();
+// }
+// Otros ejemplos de control de audio con botones
+// Para primer ejemplo de Botón también con opción de Play/Pause
+function playSound() {
+  let audio = document.getElementById("musicaFondo");
+  if(audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+// Para Botón de Play/Pause. Usarlo con JS, y cambiar textos según el estado del botón.
+document.getElementById("playPauseBtn").addEventListener("click", function () {
+  let audio2 = document.getElementById("audio2");
+  if (audio2.paused) {
+    audio2.play();
+    this.textContent = "Pausar";
+  } else {
+    audio2.pause();
+    this.textContent = "Reproducir";
+        // this.innerHTML = "Reproducir"; // otra forma de cambiar nombre
+  }
+});
+
+
+
+
+
+
+// La misma sintaxis anterior, pero declarando primero la variable para el elemento playPauseBtn
+
+// let botonplaypause = document.getElementById("playPauseBtn");
+
+// botonplaypause.onclick = function() {
+//   let audio = document.getElementById("audio2");
+//   if (audio.paused) {
+//     audio.play();
+//     this.textContent = "Pausar";
+     
+//   } else {
+//     audio.pause();
+//     this.textContent = "Reproducir";
+    
+//   }
+// }
+
 </script>
 
 </body>
